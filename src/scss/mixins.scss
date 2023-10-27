@@ -6,24 +6,24 @@ $maxWidthContainer: 1270; // +30px padding
   @if $type == 1 {
     // only if less than container width
     #{$property}: $startSize + px;
-    @media(max-width: #{$maxWidthContainer (+px)}) {
+    @media(max-width: #{$maxWidthContainer +px}) {
       #{$property}: calc(
-        #{$minSize (+px)} + #{$addSize} *
-          ((100vw - #{$endPoint (+px)}) / #{$maxWidthContainer - $endPoint})
+        #{$minSize +px} + #{$addSize} *
+          ((100vw - #{$endPoint +px}) / #{$maxWidthContainer - $endPoint})
       );
     }
   } @else if $type == 2 {
     // only if bigger than container width
     #{$property}: $startSize + px;
-    @media (min-width: #{$maxWidthContainer (+px)}) {
+    @media (min-width: #{$maxWidthContainer +px}) {
       #{$property}: calc(
-        #{$minSize (+px)} + #{$addSize} * ((100vw - #{$endPoint (+px)}) / #{$max-width - $endPoint})
+        #{$minSize +px} + #{$addSize} * ((100vw - #{$endPoint +px}) / #{$max-width - $endPoint})
       );
     }
   } @else {
     //always
     #{$property}: calc(
-      #{$minSize + px} + #{$addSize} * ((100vw - #{$endPoint (+px)}) / #{$max-width - $endPoint})
+      #{$minSize + px} + #{$addSize} * ((100vw - #{$endPoint +px}) / #{$max-width - $endPoint})
     );
   }
 }

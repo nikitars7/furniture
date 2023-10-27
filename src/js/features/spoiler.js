@@ -1,7 +1,7 @@
 "use strict";
 export const spoilerInit = () => {
   const spoilersArray = document.querySelectorAll("[data-spollers]");
-  const spoilerItems = document.querySelectorAll('.spollers-questions__item');
+  const spoilerItems = document.querySelectorAll('.item-menu__spoller');
   if (spoilersArray.length > 0) {
     // Получение обычных слайдеров
     const spoilersRegular = Array.from(spoilersArray).filter(function (

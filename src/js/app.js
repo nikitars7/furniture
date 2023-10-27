@@ -11,11 +11,11 @@ import * as ndevFunctions from './modules/functions.js';
 ndevFunctions.isWebp();
 
 handleHoverClick();
-// openMenu();
+openMenu();
 // useDynamicAdapt();
 // smoothScrollTo();
 // isTitleAnimated();
 // sectionInterObserver();
 // swiper();
 // initRatings();
-// spoilerInit();
+spoilerInit();

@@ -37,6 +37,12 @@ export const handleHoverClick = () => {
          removeClasses(document.querySelectorAll('.menu__item.hover'),'hover')
       }
     }
+    if(targetElement.classList.contains("search-form__icon")){
+      targetElement.closest(".search-form").classList.toggle("active");
+    }
+    if(!targetElement.closest(".search-form") && document.querySelector('.search-form.active')){
+      removeClasses(document.querySelectorAll('.search-form.active'),'active')
+   }
   }
   const removeClasses = (items,className) => {
    const arrayOfItems = Array.from(items);

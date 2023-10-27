@@ -6,10 +6,12 @@
           <a href="" class="header__logo"> Funiro. </a>
           <div class="header__menu menu">
             <nav class="menu__body">
-              <ul class="menu__list">
-                <li class="menu__item">
+              <ul data-spollers='768,max' class="menu__list">
+                <li class="menu__item item-menu__spoller">
                   <a href="" class="menu__link">Products</a>
                   <button
+                  data-spoller
+                  tabindex="-1"
                     type="button"
                     class="menu__arrow icon-arrow-down"
                   ></button>
@@ -28,9 +30,11 @@
                     </li>
                   </ul>
                 </li>
-                <li class="menu__item">
+                <li class="menu__item item-menu__spoller">
                   <a href="" class="menu__link">Rooms</a>
                   <button
+                  data-spoller
+                  tabindex="-1"
                     type="button"
                     class="menu__arrow icon-arrow-down"
                   ></button>

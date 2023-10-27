@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="css/style.min.css?_v=20231027021534">
+   <link rel="stylesheet" href="css/style.min.css">
    <title>Main</title>
 </head>
-<body>
-   <header class="header">
+  <body>
+    <div class="wrapper">
+      <header class="header">
   <div class="header__wrapper">
     <div class="header__container">
       <div class="header__body">
@@ -15,10 +16,12 @@
           <a href="" class="header__logo"> Funiro. </a>
           <div class="header__menu menu">
             <nav class="menu__body">
-              <ul class="menu__list">
-                <li class="menu__item">
+              <ul data-spollers='768,max' class="menu__list">
+                <li class="menu__item item-menu__spoller">
                   <a href="" class="menu__link">Products</a>
                   <button
+                  data-spoller
+                  tabindex="-1"
                     type="button"
                     class="menu__arrow icon-arrow-down"
                   ></button>
@@ -37,9 +40,11 @@
                     </li>
                   </ul>
                 </li>
-                <li class="menu__item">
+                <li class="menu__item item-menu__spoller">
                   <a href="" class="menu__link">Rooms</a>
                   <button
+                  data-spoller
+                  tabindex="-1"
                     type="button"
                     class="menu__arrow icon-arrow-down"
                   ></button>
@@ -93,7 +98,7 @@
             </div>
           </div>
           <a href="" class="actions-header__item actions-header__item-user ibg">
-             <picture><source srcset="img/avatar.webp" type="image/webp"><img src="img/avatar.jpg" alt="user"></picture>
+             <img src="img/avatar.jpg" alt="user">
           </a>
         </div>
         <div class="icon__menu">
@@ -104,13 +109,13 @@
   </div>
 </header>
 
-     <main>
-     </main>
-   <footer class="footer">
+      <main></main>
+      <footer class="footer">
    <div class="footer__container">
       
    </div>
 </footer>
-   <script src="js/app.min.js?_v=20231027021534"></script>
-</body>
+    </div>
+    <script src="js/app.min.js"></script>
+  </body>
 </html>

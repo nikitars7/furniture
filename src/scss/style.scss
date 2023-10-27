@@ -23,6 +23,7 @@ $mobileSmall:479.98px;
 
 
 body{
+   background-color: #F9F1E7;
    font-family: $fontFamily;
    color:$mainColor;
    @include adaptiv-value('font-size',16,14,1);
@@ -34,7 +35,7 @@ body{
 }
 .wrapper{
 	min-height: 100%;
-	display: flex;
+	display:flex;
 	flex-direction:column;
 	overflow: hidden;
 }
@@ -54,3 +55,4 @@ body{
 }
 
 @import 'header.scss';
+@import 'footer.scss';
