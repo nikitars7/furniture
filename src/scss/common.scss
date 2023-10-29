@@ -1,0 +1,7 @@
+.footer-title{
+    color:#000;
+    @include adaptiv-value('font-size',22,18,1);
+    font-weight: 700;
+    background-color: #f9f1e7;
+    line-height: 120.8333333333%;
+}

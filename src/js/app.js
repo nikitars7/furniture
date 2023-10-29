@@ -6,12 +6,14 @@ import { swiper } from './features/swiper.js';
 import { initRatings } from './features/rating.js';
 import { spoilerInit } from './features/spoiler.js';
 import { handleHoverClick } from './script.js';
+import { arrowInitSpoilers } from './script.js';
 import * as ndevFunctions from './modules/functions.js';
 
 ndevFunctions.isWebp();
 
 handleHoverClick();
 openMenu();
+arrowInitSpoilers();
 // useDynamicAdapt();
 // smoothScrollTo();
 // isTitleAnimated();
@@ -19,3 +21,5 @@ openMenu();
 // swiper();
 // initRatings();
 spoilerInit();
+
+

@@ -718,3 +718,213 @@ main {
     margin-bottom: 15px;
   }
 }
+.footer__body {
+  display: grid;
+  grid-template-columns: 250px 1fr 290px;
+  border-top: 1px solid #d8d8d8;
+  column-gap: 80px;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+@media (max-width: 1270px) {
+  .footer__body {
+    column-gap: calc(0px + 80 * (100vw - 320px) / 950);
+  }
+}
+@media (max-width: 1270px) {
+  .footer__body {
+    padding-top: calc(40px + 40 * (100vw - 320px) / 950);
+  }
+}
+@media (max-width: 1270px) {
+  .footer__body {
+    padding-bottom: calc(20px + 30 * (100vw - 320px) / 950);
+  }
+}
+@media (max-width: 1240px) {
+  .footer__body {
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 290px;
+  }
+}
+@media (max-width: 991.98px) {
+  .footer__body {
+    display: block;
+  }
+}
+.footer__main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media (max-width: 1240px) {
+  .footer__main {
+    grid-column: span 2;
+  }
+  .footer__main:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 767.98px) {
+  .footer__logo {
+    margin-bottom: 16px;
+  }
+}
+.footer__text {
+  color: #616161;
+  line-height: 150%;
+}
+.footer__text:not(:last-child) {
+  margin-bottom: 16px;
+}
+@media (max-width: 1270px) {
+  .footer__text:not(:last-child) {
+    margin-bottom: calc(8px + 8 * (100vw - 320px) / 950);
+  }
+}
+.contacts-footer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  align-items: flex-start;
+}
+@media (max-width: 1270px) {
+  .contacts-footer {
+    row-gap: calc(8px + 8 * (100vw - 320px) / 950);
+  }
+}
+.contacts-footer__item {
+  color: #616161;
+  line-height: 150%;
+  transition: color 0.3s ease 0s;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 8px;
+}
+@media (max-width: 1270px) {
+  .contacts-footer__item {
+    column-gap: calc(4px + 4 * (100vw - 320px) / 950);
+  }
+}
+@media (any-hover: hover) {
+  .contacts-footer__item:hover {
+    color: #E89F71;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .menu-footer:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 767.98px) {
+  .menu-footer {
+    display: flex;
+  }
+}
+.menu-footer__title {
+  cursor: default;
+}
+._init .menu-footer__title {
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+._init .menu-footer__title::before {
+  font-size: 12px;
+  transition: all 0.3s ease 0s;
+}
+.menu-footer__title._active::before {
+  transform: rotate(-180deg);
+}
+.menu-footer__column {
+  flex: 0 1 33.3333%;
+}
+@media (max-width: 767.98px) {
+  .menu-footer__column {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .menu-footer__list {
+    padding-top: 15px;
+  }
+}
+.menu-footer__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+.menu-footer__link {
+  color: #616161;
+  line-height: 150%;
+  transition: color 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .menu-footer__link:hover {
+    color: #E89F71;
+  }
+}
+
+@media (min-width: 767.98px) {
+  .footer-title {
+    margin-bottom: 16px;
+  }
+}
+@media (min-width: 767.98px) and (max-width: 1270px) {
+  .footer-title {
+    margin-bottom: calc(8px + 8 * (100vw - 320px) / 950);
+  }
+}
+
+.subscribe__title {
+  margin-bottom: 16px;
+}
+@media (max-width: 1270px) {
+  .subscribe__title {
+    margin-bottom: calc(8px + 8 * (100vw - 320px) / 950);
+  }
+}
+.subscribe__form {
+  display: flex;
+  column-gap: 4px;
+}
+.subscribe__input {
+  width: 100%;
+  padding: 0px 12px;
+  color: #898989;
+  background-color: #f4f5f7;
+  line-height: 150%;
+}
+.subscribe__input:focus::placeholder {
+  color: transparent;
+}
+.subscribe__btn {
+  font-size: 18px;
+  flex: 0 0 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E89F71;
+  color: #fff;
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .subscribe__btn:hover {
+    background-color: #be825c;
+  }
+}
+
+.footer-title {
+  color: #000;
+  font-size: 22px;
+  font-weight: 700;
+  background-color: #f9f1e7;
+  line-height: 120.8333333333%;
+}
+@media (max-width: 1270px) {
+  .footer-title {
+    font-size: calc(18px + 4 * (100vw - 320px) / 950);
+  }
+}
