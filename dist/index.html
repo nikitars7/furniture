@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="css/style.min.css">
-   <title>Main</title>
+   <title>Funiro</title>
 </head>
   <body>
     <div class="wrapper">
@@ -109,7 +109,94 @@
   </div>
 </header>
 
-      <main></main>
+      <main class="page">
+        <section class="page__main-slider main-slider">
+          <div class="main-slider__container">
+            <div class="main-slider__body">
+              <div class="main-slider__content content-main">
+                <h1 class="content-main__title">
+                  High-Quality Furniture Just For You
+                </h1>
+                <div class="content-main__text">
+                  Our furniture is made from selected and best quality materials
+                  that are suitable for your dream home
+                </div>
+                <a href="" data-da=".main-slider__body,991.98" class="content-main__button btn">Shop Now</a>
+              </div>
+              <div class="main-slider__slider slider-main">
+                <div class="slider-main__controls controls-slider">
+                  <div class="controls-slider__dots"></div>
+                  <div class="controls-slider__arrows slider-arrows">
+                    <button
+                      type="button"
+                      class="slider-arrow slider-arrow__prev icon-arrow-down"
+                    ></button>
+                    <button
+                      type="button"
+                      class="slider-arrow slider-arrow__next icon-arrow-down"
+                    ></button>
+                  </div>
+                </div>
+                  <div class="slider-main__slider swiper">
+                    <div class="slider-main__wrapper swiper-wrapper">
+                      <div class="slider-main__slide swiper-slide">
+                        <div class="slider-main__image ibg">
+                          <img
+                            src="img/mainslider/mainslider.jpg"
+                            alt="slider"
+                          />
+                        </div>
+                        <a href="" class="slider-main__content">
+                          <div class="slider-main__title">Bohauss</div>
+                          <div class="slider-main__text">
+                            Luxury big sofa 2-seat
+                          </div>
+                          <div class="slider-main__price icon-arrow-link">
+                            Rp 17.000.000
+                          </div>
+                        </a>
+                      </div>
+                      <div class="slider-main__slide swiper-slide">
+                        <div class="slider-main__image ibg">
+                          <img
+                            src="img/mainslider/mainslider.jpg"
+                            alt="slider"
+                          />
+                        </div>
+                        <a href="" class="slider-main__content">
+                          <div class="slider-main__title">Bohauss</div>
+                          <div class="slider-main__text">
+                            Luxury big sofa 2-seat
+                          </div>
+                          <div class="slider-main__price icon-arrow-link">
+                            Rp 17.000.000
+                          </div>
+                        </a>
+                      </div>
+                      <div class="slider-main__slide swiper-slide">
+                        <div class="slider-main__image ibg">
+                          <img
+                            src="img/mainslider/mainslider.jpg"
+                            alt="slider"
+                          />
+                        </div>
+                        <a href="" class="slider-main__content">
+                          <div class="slider-main__title">Bohauss</div>
+                          <div class="slider-main__text">
+                            Luxury big sofa 2-seat
+                          </div>
+                          <div class="slider-main__price icon-arrow-link">
+                            Rp 17.000.000
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
       <footer class="footer">
   <div class="footer__container">
     <div class="footer__body">
@@ -189,8 +276,8 @@
      </div>
      <div class="footer__subscribe subscribe">
       <div class="subscribe__title footer-title">Stay Updated</div>
-       <form action="#" class="subscribe__form">
-         <input type="text" placeholder="Enter your email"  class="subscribe__input">
+       <form data-validate action="#" class="subscribe__form">
+         <input data-email type="text" placeholder="Enter your email"  class="subscribe__input req__email">
          <button type="submit" class="subscribe__btn icon-send"></button>
        </form>
      </div>

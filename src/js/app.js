@@ -7,6 +7,8 @@ import { initRatings } from './features/rating.js';
 import { spoilerInit } from './features/spoiler.js';
 import { handleHoverClick } from './script.js';
 import { arrowInitSpoilers } from './script.js';
+import { ibg } from './features/ibg.js';
+import { formValidate } from './features/formValidate.js';
 import * as ndevFunctions from './modules/functions.js';
 
 ndevFunctions.isWebp();
@@ -14,11 +16,13 @@ ndevFunctions.isWebp();
 handleHoverClick();
 openMenu();
 arrowInitSpoilers();
-// useDynamicAdapt();
+ibg();
+formValidate()
+useDynamicAdapt();
 // smoothScrollTo();
 // isTitleAnimated();
 // sectionInterObserver();
-// swiper();
+swiper();
 // initRatings();
 spoilerInit();
 

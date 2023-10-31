@@ -23,7 +23,6 @@ $mobileSmall:479.98px;
 
 
 body{
-   background-color: #F9F1E7;
    font-family: $fontFamily;
    color:$mainColor;
    @include adaptiv-value('font-size',16,14,1);
@@ -57,3 +56,5 @@ body{
 @import 'header.scss';
 @import 'footer.scss';
 @import 'common.scss';
+@import 'mainslider.scss';
+@import 'swiper.scss';

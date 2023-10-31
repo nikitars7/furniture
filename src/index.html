@@ -1,10 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  @@include('html/head.html',{ "title":"Main" })
+  @@include('html/head.html',{ "title":"Funiro" })
   <body>
     <div class="wrapper">
       @@include('html/header.html',{})
-      <main></main>
+      <main class="page">
+        <section class="page__main-slider main-slider">
+          <div class="main-slider__container">
+            <div class="main-slider__body">
+              <div class="main-slider__content content-main">
+                <h1 class="content-main__title">
+                  High-Quality Furniture Just For You
+                </h1>
+                <div class="content-main__text">
+                  Our furniture is made from selected and best quality materials
+                  that are suitable for your dream home
+                </div>
+                <a href="" data-da=".main-slider__body,991.98" class="content-main__button btn">Shop Now</a>
+              </div>
+              <div class="main-slider__slider slider-main">
+                <div class="slider-main__controls controls-slider">
+                  <div class="controls-slider__dots"></div>
+                  <div class="controls-slider__arrows slider-arrows">
+                    <button
+                      type="button"
+                      class="slider-arrow slider-arrow__prev icon-arrow-down"
+                    ></button>
+                    <button
+                      type="button"
+                      class="slider-arrow slider-arrow__next icon-arrow-down"
+                    ></button>
+                  </div>
+                </div>
+                  <div class="slider-main__slider swiper">
+                    <div class="slider-main__wrapper swiper-wrapper">
+                      <div class="slider-main__slide swiper-slide">
+                        <div class="slider-main__image ibg">
+                          <img
+                            src="@img/mainslider/mainslider.jpg"
+                            alt="slider"
+                          />
+                        </div>
+                        <a href="" class="slider-main__content">
+                          <div class="slider-main__title">Bohauss</div>
+                          <div class="slider-main__text">
+                            Luxury big sofa 2-seat
+                          </div>
+                          <div class="slider-main__price icon-arrow-link">
+                            Rp 17.000.000
+                          </div>
+                        </a>
+                      </div>
+                      <div class="slider-main__slide swiper-slide">
+                        <div class="slider-main__image ibg">
+                          <img
+                            src="@img/mainslider/mainslider.jpg"
+                            alt="slider"
+                          />
+                        </div>
+                        <a href="" class="slider-main__content">
+                          <div class="slider-main__title">Bohauss</div>
+                          <div class="slider-main__text">
+                            Luxury big sofa 2-seat
+                          </div>
+                          <div class="slider-main__price icon-arrow-link">
+                            Rp 17.000.000
+                          </div>
+                        </a>
+                      </div>
+                      <div class="slider-main__slide swiper-slide">
+                        <div class="slider-main__image ibg">
+                          <img
+                            src="@img/mainslider/mainslider.jpg"
+                            alt="slider"
+                          />
+                        </div>
+                        <a href="" class="slider-main__content">
+                          <div class="slider-main__title">Bohauss</div>
+                          <div class="slider-main__text">
+                            Luxury big sofa 2-seat
+                          </div>
+                          <div class="slider-main__price icon-arrow-link">
+                            Rp 17.000.000
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
       @@include('html/footer.html',{})
     </div>
     <script src="js/app.min.js"></script>
