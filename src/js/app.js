@@ -9,6 +9,7 @@ import { handleHoverClick } from './script.js';
 import { arrowInitSpoilers } from './script.js';
 import { ibg } from './features/ibg.js';
 import { formValidate } from './features/formValidate.js';
+import { scrollHeader } from './script.js';
 import * as ndevFunctions from './modules/functions.js';
 
 ndevFunctions.isWebp();
@@ -19,6 +20,7 @@ arrowInitSpoilers();
 ibg();
 formValidate()
 useDynamicAdapt();
+scrollHeader();
 // smoothScrollTo();
 // isTitleAnimated();
 // sectionInterObserver();

@@ -58,3 +58,57 @@ body{
 @import 'common.scss';
 @import 'mainslider.scss';
 @import 'swiper.scss';
+@import 'products.scss';
+
+.page {
+
+   &__benefits {
+
+   }
+}
+.benefits {
+@include adaptiv-value('padding-top',88,40,1);
+@include adaptiv-value('padding-bottom',88,40,1);
+   &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+   }
+
+   &__item {
+      display: inline-grid;
+      padding: 15px 0px;
+      grid-template: auto auto / 85px 1fr;
+      @media (max-width:$tablet){
+        min-width: 280px;
+      }
+      @media (max-width:$mobile){
+         grid-template: auto auto / auto 1fr;
+       }
+   }
+}
+.item-benefits {
+
+   &__image {
+      text-align: center;
+      align-self: center;
+      grid-row: span 2;
+      @media (max-width:$mobile){
+       padding: 0px 15px 0px 0px;
+      }
+   }
+
+   &__title {
+      color:#3A3A3A;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 150%;
+   }
+
+   &__text {
+      font-weight: 500;
+      color:#898989;
+      line-height: 150%;
+   }
+}

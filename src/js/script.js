@@ -1,3 +1,4 @@
+import { fetchProducts } from "./features/fetchProducts.js";
 const isMobile = {
   Android: function () {
     return navigator.userAgent.match(/Android/i);
@@ -49,6 +50,10 @@ export const handleHoverClick = () => {
     ) {
       removeClasses(document.querySelectorAll(".search-form.active"), "active");
     }
+    if(targetElement.classList.contains('products__more')){
+      fetchProducts(targetElement);
+      e.preventDefault();
+    }
   }
   const removeClasses = (items, className) => {
     const arrayOfItems = Array.from(items);
@@ -77,4 +82,15 @@ export const arrowInitSpoilers = () => {
   })
 };
 
-
+export const scrollHeader = () => {
+  const headerElement = document.querySelector('.header')
+  const callback = (entries,observer) => {
+    if(entries[0].isIntersecting){
+      headerElement.classList.remove('scroll')
+    }else{
+      headerElement.classList.add('scroll')
+    }
+  }
+  const headerObserver = new IntersectionObserver(callback);
+  headerObserver.observe(headerElement);
+}

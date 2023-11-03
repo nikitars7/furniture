@@ -22,6 +22,7 @@ import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js";
 import { svGSprite } from "./gulp/tasks/svgSprite.js";
 import { zip } from "./gulp/tasks/zip.js";
 import { ftp } from "./gulp/tasks/ftp.js";
+import { json } from "./gulp/tasks/json.js";
 import { ghPagesTask } from "./gulp/tasks/ghpages.js";
 // Наблюдатель
 function watcher() {
@@ -30,6 +31,7 @@ function watcher() {
   gulp.watch(path.watch.scss, scss);
   gulp.watch(path.watch.js, js);
   gulp.watch(path.watch.images, images);
+  gulp.watch(path.watch.json, json);
 }
 
 export { svGSprite };
@@ -37,7 +39,7 @@ export { svGSprite };
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 const mainTasks = gulp.series(
   fonts,
-  gulp.parallel(copy, html, scss, js, images)
+  gulp.parallel(copy, html, scss, json, js, images)
 );
 // Построение сценариев выполнения задач
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));

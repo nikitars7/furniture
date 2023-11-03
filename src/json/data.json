@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "id": 5,
+      "image": "image5.jpg",
+      "title": "Grifo",
+      "description": "Night lamp",
+      "labels": null,
+      "prices": {
+        "price": "Rp 1.500.000"
+      }
+    },
+    {
+      "id": 6,
+      "image": "image6.jpg",
+      "title": "Muggo",
+      "description": "Small mug",
+      "labels": [
+          {
+            "type":"new",
+            "value":"New"
+          }
+      ],
+      "prices": {
+        "price": "Rp 150.000"
+      }
+    },
+    {
+      "id": 7,
+      "image": "image7.jpg",
+      "title": "Pingky",
+      "description": "Cute bed set",
+      "labels": [
+         {
+           "type":"sale",
+           "value":"-50%"
+         }
+     ],
+      "prices": {
+        "price": "Rp 7.000.000",
+        "oldPrice": "Rp 14.000.000"
+      }
+    },
+    {
+      "id": 8,
+      "image": "image8.jpg",
+      "title": "Potty",
+      "description": "Minimalist flower pot",
+      "labels": [
+         {
+           "type":"new",
+           "value":"New"
+         },
+         {
+            "type":"sale",
+            "value":"-30%"
+          }
+     ],
+      "prices": {
+        "price": "Rp 500.000"
+      }
+    }
+  ]
+}
