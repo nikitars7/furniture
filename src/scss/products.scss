@@ -30,6 +30,10 @@
    &__more{
     border: 1px solid $orangeColor;
     min-width: 245px;
+    &.hold{
+      opacity: 0.2;
+      cursor: default;
+     }
    }
 }
 .item-product {
@@ -148,7 +152,7 @@
             align-items: center;
             justify-content: center;
             background-color: rgba(58, 58, 58, 0.74);
-            z-index: 3;
+            z-index: 10;
          }
       }
    }
@@ -165,6 +169,10 @@
       flex: 1 1 100%;
       &:not(:last-child) {
          margin-bottom: 24px;
+      }
+      &.hold{
+       opacity: 0.2;
+       cursor: default;
       }
    }
 

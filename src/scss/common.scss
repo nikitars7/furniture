@@ -5,13 +5,19 @@
     background-color: #fff;
     line-height: 120.8333333333%;
 }
-
+.flyImage.ibg{
+opacity: 1;
+position: fixed;
+z-index: 100;
+transition: all 1s ease 0s;
+}
 .slider-arrows {
     display: grid;
     grid-template-columns: repeat(2, 48px);
     column-gap: 8px;
 }
 .slider-arrow {
+    pointer-events: auto;
     border-radius: 50%;
     height: 48px;
     background-color: rgba(232, 159, 113, 0.3);
@@ -34,7 +40,7 @@
             background-color: rgba(232, 159, 113, 1);
         }
     }
-    &_white {
+    &--white {
         box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.16);
         background-color: #fff;
         @media (any-hover: hover) {

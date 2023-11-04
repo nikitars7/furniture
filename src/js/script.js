@@ -1,4 +1,5 @@
 import { fetchProducts } from "./features/fetchProducts.js";
+import { addToCart, updateCart } from "./features/addtoCart.js";
 const isMobile = {
   Android: function () {
     return navigator.userAgent.match(/Android/i);
@@ -28,6 +29,7 @@ const isMobile = {
 export const handleHoverClick = () => {
   document.addEventListener("click", documentActions);
   function documentActions(e) {
+    e.preventDefault()
     const targetElement = e.target;
 
     if (window.innerWidth > 768 && isMobile.any()) {
@@ -52,7 +54,21 @@ export const handleHoverClick = () => {
     }
     if(targetElement.classList.contains('products__more')){
       fetchProducts(targetElement);
-      e.preventDefault();
+    }
+    if(targetElement.classList.contains('actions-item__button')){
+     const productId = targetElement.closest('.products__item').dataset.pid;
+     addToCart(targetElement,productId)
+    }
+    if(targetElement.classList.contains('cart-header__icon') || targetElement.closest('.cart-header__icon')){
+     if(document.querySelector('.cart-list').children.length > 0){
+     document.querySelector('.cart-header').classList.toggle('active');
+     }
+    }else if(!targetElement.closest('.cart-header') && !targetElement.classList.contains('actions-item__button')){
+      document.querySelector('.cart-header').classList.remove('active');
+    }
+    if(targetElement.classList.contains('cart-list__delete')){
+      const productId = targetElement.closest('.cart-list__item').dataset.cartPid;
+      updateCart(targetElement,productId,false);
     }
   }
   const removeClasses = (items, className) => {
