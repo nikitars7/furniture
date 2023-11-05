@@ -1938,6 +1938,125 @@ main {
   line-height: 150%;
 }
 
+.page__tricks {
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+@media (max-width: 1270px) {
+  .page__tricks {
+    padding-top: calc(20px + 24 * (100vw - 320px) / 950);
+  }
+}
+@media (max-width: 1270px) {
+  .page__tricks {
+    padding-bottom: calc(20px + 24 * (100vw - 320px) / 950);
+  }
+}
+
+.tricks__title {
+  text-align: center;
+}
+.slider-tricks {
+  position: relative;
+}
+.slider-tricks__slider {
+  margin-left: -32px;
+  margin-right: -32px;
+  padding: 32px;
+}
+@media (max-width: 1270px) {
+  .slider-tricks__slider {
+    margin-left: calc(-15px + -17 * (100vw - 320px) / 950);
+  }
+}
+@media (max-width: 1270px) {
+  .slider-tricks__slider {
+    margin-right: calc(-15px + -17 * (100vw - 320px) / 950);
+  }
+}
+@media (max-width: 1270px) {
+  .slider-tricks__slider {
+    padding: calc(15px + 17 * (100vw - 320px) / 950);
+  }
+}
+.slider-tricks__slide {
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .slider-tricks__slide:hover {
+    box-shadow: 0px 0px 32px rgba(97, 97, 97, 0.2);
+  }
+}
+.slider-tricks__image {
+  padding-bottom: 64.1943734015%;
+}
+.slider-tricks__content {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0px 16px 10px;
+  flex: 1 1 auto;
+  align-items: flex-start;
+}
+.slider-tricks__text {
+  flex: 1 1 auto;
+  color: #3A3A3A;
+  font-weight: 600;
+  line-height: 120%;
+  cursor: pointer;
+  transition: color 0.3s ease 0s;
+  font-size: 24px;
+}
+@media (max-width: 1270px) {
+  .slider-tricks__text {
+    font-size: calc(18px + 6 * (100vw - 320px) / 950);
+  }
+}
+.slider-tricks__text:not(:last-child) {
+  margin-bottom: 8px;
+}
+@media (any-hover: hover) {
+  .slider-tricks__text:hover {
+    color: #E89F71;
+  }
+}
+.slider-tricks__date {
+  color: #898989;
+  font-size: 14px;
+  line-height: 150%;
+}
+.slider-tricks__dotts {
+  padding-top: 8px;
+  justify-content: center;
+}
+@media (max-width: 1270px) {
+  .slider-tricks__dotts {
+    padding-top: calc(0px + 8 * (100vw - 320px) / 950);
+  }
+}
+.slider-tricks__arrows {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translate(0px, -50%);
+  justify-content: space-between;
+  z-index: 5;
+  width: calc(100% - 48px);
+  left: 24px;
+}
+@media (min-width: 1340px) {
+  .slider-tricks__arrows {
+    width: calc(100% + 48px);
+    left: -24px;
+  }
+}
+@media (max-width: 767.98px) {
+  .slider-tricks__arrows {
+    display: none;
+  }
+}
+
 .benefits {
   padding-top: 88px;
   padding-bottom: 88px;
