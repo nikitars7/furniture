@@ -50,3 +50,41 @@ export const roomsSlider = () => {
     })
   }
 }
+
+export const tricksSlider = () => {
+  if (document.querySelector('.slider-tricks')) {
+    new Swiper('.slider-tricks__slider', {
+      modules: [Navigation, Pagination],
+      observer: true,
+      observeParents: true,
+      slidesPerView: 3,
+      spaceBetween: 32,
+      loop:true,
+      loopAdditionalSlides:4,
+      watchOverflow:true,
+      speed: 800,
+      pagination: {
+        el: '.slider-tricks__dotts',
+        clickable: true,
+      },
+      navigation: {
+        prevEl: '.slider-tricks .slider-arrow__prev',
+        nextEl: '.slider-tricks .slider-arrow__next',
+      },
+      breakpoints:{
+        320:{
+          slidesPerView:1.1,
+          spaceBetween:25
+        },
+        768:{
+          slidesPerView:2,
+          spaceBetween:20
+        },
+        992:{
+          slidesPerView:3,
+          spaceBetween:32
+        }
+      }
+    })
+  }
+}

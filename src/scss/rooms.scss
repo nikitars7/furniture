@@ -1,203 +1,205 @@
 .page {
-   &__rooms {
-   }
+  &__rooms {
+  }
 }
 .rooms {
-   background-color: #fcf8f3;
-   @include adaptiv-value("padding-top", 44, 20, 1);
-   @include adaptiv-value("padding-bottom", 44, 20, 1);
-   &__container {
-      @media (min-width: $tablet) {
-         display: flex;
-      }
-   }
+  background-color: #fcf8f3;
+  @include adaptiv-value("padding-top", 44, 20, 1);
+  @include adaptiv-value("padding-bottom", 44, 20, 1);
+  &__container {
+    @media (min-width: $tablet) {
+      display: flex;
+    }
+  }
 
-   &__content {
-      flex: 0 0 calc(465 / 1240) * 100%;
-      position: relative;
-      z-index: 5;
-      align-self: center;
-      @media (min-width: $tablet) {
-         @include adaptiv-value("padding-right", 80, 30, 1);
+  &__content {
+    flex: 0 0 calc(465 / 1240) * 100%;
+    position: relative;
+    z-index: 5;
+    align-self: center;
+    @media (min-width: $tablet) {
+      @include adaptiv-value("padding-right", 80, 30, 1);
+    }
+    @media (max-width: $tablet) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
       }
-      @media (max-width: $tablet) {
-         &:not(:last-child) {
-            margin-bottom: 30px;
-         }
-      }
-   }
+    }
+  }
 
-   &__slider {
-      flex: 1 1 auto;
-      min-width: 0;
-      align-self: flex-start;
-      @media (max-width:$mobileSmall){
-         margin:0px -15px;
-      }
-   }
+  &__slider {
+    flex: 1 1 auto;
+    min-width: 0;
+    align-self: flex-start;
+    @media (max-width: $mobileSmall) {
+      margin: 0px -15px;
+    }
+  }
 }
 .content-rooms {
-   &__title {
-      &:not(:last-child) {
-         margin-bottom: 8px;
-      }
-   }
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
 
-   &__text {
-      font-weight: 500;
-      line-height: 150%;
-      color: #616161;
-      &:not(:last-child) {
-         @include adaptiv-value("margin-bottom", 24, 10, 1);
-      }
-   }
+  &__text {
+    font-weight: 500;
+    line-height: 150%;
+    color: #616161;
+    &:not(:last-child) {
+      @include adaptiv-value("margin-bottom", 24, 10, 1);
+    }
+  }
 
-   &__button {
-      min-width: 176px;
-      background-color: $orangeColor;
-      color: #fff;
-      transition: all 0.3s ease 0s;
-      @media (any-hover: hover) {
-         &:hover {
-            background-color: #c97a4a;
-         }
+  &__button {
+    min-width: 176px;
+    background-color: $orangeColor;
+    color: #fff;
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #c97a4a;
       }
-   }
+    }
+  }
 }
 .slider-rooms {
-   position: relative;
-   &__slider {
-      overflow: visible;
-      position: relative;
-      &::before {
-         content: "";
-         position: absolute;
-         top: 0;
-         height: 100%;
-         width: 100vw;
-         left: 0;
-         background-color: #fcf8f3;
-         z-index: 2;
-         transform: translate(-100%, 0px);
-      }
-   }
-
-   &__wrapper {
-   }
-
-   &__slide {
-      width: 372px;
-      position: relative;
-      overflow: hidden;
-      @include adaptiv-value("min-height", 585, 400, 1);
-      &.swiper-slide-active {
-         .slider-rooms__image {
-            height: 100%;
-         }
-      }
-      @media (max-width:$mobileSmall){
-         width: 100%;
-      }
-   }
-
-   &__image {
-      transition: height 0.8s ease 0s;
+  position: relative;
+  &__slider {
+    overflow: visible;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
       height: 100%;
-      @media (min-width: $mobile) {
-         height: 83%;
-      }
-   }
+      width: 100vw;
+      left: 0;
+      background-color: #fcf8f3;
+      z-index: 2;
+      transform: translate(-100%, 0px);
+    }
+  }
 
-   &__content {
+  &__wrapper {
+  }
+
+  &__slide {
+    width: 372px;
+    position: relative;
+    overflow: hidden;
+    @include adaptiv-value("min-height", 585, 400, 1);
+    &.swiper-slide-active {
+      .slider-rooms__image {
+        height: 100%;
+      }
+    }
+    @media (max-width: $mobileSmall) {
+      width: 100%;
+    }
+  }
+
+  &__image {
+    transition: height 0.8s ease 0s;
+    height: 100%;
+    @media (min-width: $mobile) {
+      height: 83%;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    color: inherit;
+    max-width: 240px;
+    @include adaptiv-value("left", 24, 15, 1);
+    @include adaptiv-value("bottom", 24, 15, 1);
+    @include adaptiv-value("padding", 32, 15, 1);
+    background: rgba(255, 255, 255, 0.9);
+    @supports (
+      (-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))
+    ) {
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(15.5px);
+    }
+    &::before {
       position: absolute;
-      color: inherit;
-      max-width: 240px;
-      @include adaptiv-value("left", 24, 15, 1);
-      @include adaptiv-value("bottom", 24, 15, 1);
-      @include adaptiv-value("padding", 32, 15, 1);
-      background: rgba(255, 255, 255, 0.9);
-      @supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
-         background: rgba(255, 255, 255, 0.72);
-         backdrop-filter: blur(15.5px);
-      }
-      &::before {
-         position: absolute;
-         bottom: 0;
-         right: 0;
-         transform: translate(100%, 0px);
-         width: 48px;
-         height: 48px;
-         color: #fff;
-         background-color: $orangeColor;
-         display: flex;
-         align-items: center;
-         justify-content: center;
-      }
-   }
+      bottom: 0;
+      right: 0;
+      transform: translate(100%, 0px);
+      width: 48px;
+      height: 48px;
+      color: #fff;
+      background-color: $orangeColor;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 
-   &__label {
-   }
+  &__label {
+  }
 
-   &__title {
-      @include adaptiv-value("font-size", 28, 22, 1);
-      line-height: 120%;
-      font-weight: 600;
-      color: $mainColor;
-   }
+  &__title {
+    @include adaptiv-value("font-size", 28, 22, 1);
+    line-height: 120%;
+    font-weight: 600;
+    color: $mainColor;
+  }
 
-   &__arrows {
-      pointer-events: none;
+  &__arrows {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(0px, -50%);
+    justify-content: space-between;
+    z-index: 5;
+    width: calc(100% - 48px);
+    left: 24px;
+    @media (min-width: 1340px) {
+      width: calc(100% + 48px);
+      left: -24px;
+    }
+  }
+
+  &__dotts {
+    @media (min-width: $mobile) {
       position: absolute;
-      top: 50%;
-      transform: translate(0px, -50%);
-      justify-content: space-between;
-      z-index: 5;
-      width: calc(100% - 48px);
-      left: 24px;
-      @media (min-width: 1340px) {
-         width: calc(100% + 48px);
-         left: -24px;
-      }
-   }
-
-   &__dotts {
-      @media (min-width: $mobile) {
-         position: absolute;
-         bottom: 30px;
-         width: 100%;
-         left: 396px;
-      }
-      @media (max-width:$mobile){
-         justify-content: center;
-         padding-top: 15px;
-      }
-   }
+      bottom: 30px;
+      width: 100%;
+      left: 396px;
+    }
+    @media (max-width: $mobile) {
+      justify-content: center;
+      padding-top: 15px;
+    }
+  }
 }
 
 .icon-arrow-link {
 }
 .label-slider {
-   display: grid;
-   color: #616161;
-   grid-template-columns: auto 27px auto;
-   gap: 8px;
-   align-items: center;
-   justify-content: start;
-   &:not(:last-child) {
-      margin-bottom: 8px;
-   }
-   &__number {
-      font-weight: 500;
-      line-height: 150%;
-   }
+  display: grid;
+  color: #616161;
+  grid-template-columns: auto 27px auto;
+  gap: 8px;
+  align-items: center;
+  justify-content: start;
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  &__number {
+    font-weight: 500;
+    line-height: 150%;
+  }
 
-   &__line {
-      height: 1px;
-      background-color: #616161;
-   }
+  &__line {
+    height: 1px;
+    background-color: #616161;
+  }
 
-   &__text {
-      font-weight: 500;
-      line-height: 150%;
-   }
+  &__text {
+    font-weight: 500;
+    line-height: 150%;
+  }
 }

@@ -1,0 +1,100 @@
+
+.page {
+  &__tricks {
+    @include adaptiv-value("padding-top", 44, 20, 1);
+    @include adaptiv-value("padding-bottom", 44, 20, 1);
+  }
+}
+.tricks {
+  &__container {
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__slider {
+  }
+}
+
+.slider-tricks {
+  position: relative;
+  &__slider {
+   @include adaptiv-value('margin-left',-32,-15,1);
+   @include adaptiv-value('margin-right',-32,-15,1);
+   @include adaptiv-value('padding',32,15,1);
+  }
+
+  &__wrapper {
+  }
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        box-shadow: 0px 0px 32px rgba(97, 97, 97, 0.2);
+      }
+    }
+  }
+
+  &__image {
+    padding-bottom: calc(251px / 391px) * 100%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0px 16px 10px;
+    flex: 1 1 auto;
+    align-items: flex-start;
+  }
+
+  &__text {
+    flex: 1 1 auto;
+    color: $mainColor;
+    font-weight: 600;
+    line-height: 120%;
+    cursor: pointer;
+    transition: color 0.3s ease 0s;
+    @include adaptiv-value("font-size", 24, 18, 1);
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        color: $orangeColor;
+      }
+    }
+  }
+
+  &__date {
+    color: $secondColor;
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  &__dotts {
+   @include adaptiv-value('padding-top',8,0,1);
+    justify-content: center;
+  }
+
+  &__arrows {
+   pointer-events: none;
+   position: absolute;
+   top: 50%;
+   transform: translate(0px, -50%);
+   justify-content: space-between;
+   z-index: 5;
+   width: calc(100% - 48px);
+   left: 24px;
+   @media (min-width: 1340px) {
+     width: calc(100% + 48px);
+     left: -24px;
+   }
+   @media (max-width:$mobile){
+      display: none;
+   }
+  }
+}

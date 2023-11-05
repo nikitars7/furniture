@@ -5,7 +5,7 @@ import {
   isTitleAnimated,
   sectionInterObserver,
 } from "./features/sectionObserver.js";
-import { swiper ,roomsSlider} from "./features/swiper.js";
+import { swiper ,roomsSlider,tricksSlider} from "./features/swiper.js";
 import { initRatings } from "./features/rating.js";
 import { spoilerInit } from "./features/spoiler.js";
 import { handleHoverClick } from "./script.js";
@@ -25,6 +25,7 @@ formValidate();
 useDynamicAdapt();
 roomsSlider();
 scrollHeader();
+tricksSlider();
 // smoothScrollTo();
 // isTitleAnimated();
 // sectionInterObserver();
