@@ -43,9 +43,9 @@ body{
    flex: 1 1 auto;
 }
 //slider fix
-* {
-   min-width: 0;
-}
+// * {
+//    min-width: 0;
+// }
 [class*="__container"]{
    max-width: $containerWidth;
    padding-left: 15px;
@@ -61,7 +61,7 @@ body{
 @import 'products.scss';
 @import 'rooms.scss';
 @import 'tricks.scss';
-
+@import 'furniture.scss';
 .page {
 
    &__benefits {

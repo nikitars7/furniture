@@ -1,6 +1,7 @@
 import { fetchProducts } from "./features/fetchProducts.js";
 import { addToCart, updateCart } from "./features/addtoCart.js";
-const isMobile = {
+import {  initPopUp } from "./features/popup.js";
+ export const isMobile = {
   Android: function () {
     return navigator.userAgent.match(/Android/i);
   },
@@ -70,6 +71,13 @@ export const handleHoverClick = () => {
       const productId = targetElement.closest('.cart-list__item').dataset.cartPid;
       updateCart(targetElement,productId,false);
     }
+    if(targetElement.closest('.row-furniture__item')){
+      initPopUp(targetElement)
+    }
+    if(targetElement.closest('.popup__window') && targetElement.classList.contains('popup__content')){
+      initPopUp(targetElement,true)
+    }
+
   }
   const removeClasses = (items, className) => {
     const arrayOfItems = Array.from(items);

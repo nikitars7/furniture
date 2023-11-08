@@ -289,10 +289,6 @@ main {
   flex: 1 1 auto;
 }
 
-* {
-  min-width: 0;
-}
-
 [class*=__container] {
   max-width: 1270px;
   padding-left: 15px;
@@ -2055,6 +2051,120 @@ main {
   .slider-tricks__arrows {
     display: none;
   }
+}
+
+.furniture {
+  padding-bottom: 85px;
+}
+@media (max-width: 1270px) {
+  .furniture {
+    padding-bottom: calc(40px + 45 * (100vw - 320px) / 950);
+  }
+}
+.furniture__label {
+  text-align: center;
+  font-weight: 600;
+  line-height: 150%;
+  color: #616161;
+  font-size: 20px;
+}
+@media (max-width: 1270px) {
+  .furniture__label {
+    font-size: calc(16px + 4 * (100vw - 320px) / 950);
+  }
+}
+.furniture__label:not(:last-child) {
+  margin-bottom: 8px;
+}
+.furniture__title {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.furniture__content {
+  position: relative;
+}
+@media (any-hover: none) {
+  .furniture__content {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+.furniture__items {
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 16px;
+}
+@media (any-hover: hover) {
+  .furniture__items {
+    justify-content: center;
+  }
+}
+.furniture__column {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0px -8px;
+}
+.furniture__column:first-child {
+  justify-content: flex-end;
+}
+.furniture__row {
+  display: inline-grid;
+  padding: 0px 8px;
+  gap: 16px;
+  grid-template-columns: auto;
+  grid-auto-flow: column;
+}
+.furniture__row:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.row-furniture__left--top {
+  justify-content: end;
+  align-items: end;
+}
+@media (any-hover: hover) {
+  .row-furniture__item img {
+    filter: grayscale(1);
+    transition: all 0.8s ease 0s;
+  }
+  .row-furniture__item:hover img {
+    filter: grayscale(0);
+  }
+}
+.row-furniture__left--bottom {
+  justify-content: end;
+  align-items: start;
+}
+.row-furniture__center {
+  display: block;
+}
+.row-furniture__right--top {
+  align-items: end;
+}
+.row-furniture__right--bottom {
+  align-items: start;
+}
+
+.popup__window {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.popup__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 30px 10px 30px 10px;
 }
 
 .benefits {
