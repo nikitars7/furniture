@@ -10,7 +10,7 @@ export const swiper = () => {
       slidesPerView: 1,
       spaceBetween: 32,
       loop:true,
-      loopAdditionalSlides:5,
+      loopAdditionalSlides:10,
       parallax:true,
       watchOverflow:true,
       speed: 800,
