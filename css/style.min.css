@@ -1647,7 +1647,7 @@ main {
   }
 }
 @media (any-hover: hover) {
-  .item-product__actions:hover {
+  .item-product__actions {
     opacity: 0;
     transition: all 0.3s ease 0s;
     visibility: hidden;
